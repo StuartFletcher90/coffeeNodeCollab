@@ -2,7 +2,7 @@ const fs = require("fs")
 
 const addOrder = (myOrder) => {
     const allOrders = loadOrders();
-    allOrders.push({CoffeOrder: myOrders});
+    allOrders.push({CoffeOrder: myOrder});
     saveOrder(allOrders);
 }
 
@@ -10,7 +10,7 @@ const removeOrder = (deletedOrder) => {
     const allOrders = loadOrders();
 
     const ordersToKeep = allOrders.filter((order) => {
-        return order.Order !== deletedOrder
+        return order.CoffeOrder !== deletedOrder
     })
     saveOrder(ordersToKeep);
 }
@@ -43,5 +43,5 @@ module.exports = {
     addOrder,
     loadOrders,
     listOrders,
-    removeNote,
+    removeOrder,
 }

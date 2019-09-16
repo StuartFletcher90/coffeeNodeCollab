@@ -14,5 +14,5 @@ if (myCommand === "add") {
 
 } else if (myCommand === "list") {
     console.log("The current orders are:")
-    listOrder();
+    listOrders();
 }
